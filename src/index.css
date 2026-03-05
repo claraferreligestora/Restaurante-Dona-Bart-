@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-script: "Pinyon Script", cursive;
+  --color-brand: #634832; /* Elegant Brown */
+  --color-brand-light: #A68B77;
+  --color-dark: #0A0A0A;
+  --color-surface: rgba(255, 255, 255, 0.03);
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-normal font-medium;
+  }
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.glass {
+  backdrop-filter: blur(24px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bento-item {
+  @apply rounded-3xl p-8 transition-all duration-500;
+  backdrop-filter: blur(24px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bento-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.pulse-brand {
+  animation: pulse-brand 2s infinite;
+}
+
+@keyframes pulse-brand {
+  0% {
+    box-shadow: 0 0 0 0 rgba(166, 139, 119, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(166, 139, 119, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(166, 139, 119, 0);
+  }
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  min-width: 100%;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
