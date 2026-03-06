@@ -84,22 +84,22 @@ export default function App() {
 
       {/* Header */}
       <header className="fixed top-0 left-0 w-full z-50 glass border-b border-ink/5">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center cursor-pointer" onClick={() => scrollTo('hero')}>
+        <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+          <div className="flex items-center cursor-pointer group" onClick={() => scrollTo('hero')}>
             <img 
               src="https://lh3.googleusercontent.com/d/15oBXw1JVm8hv2YBgQjTO3Y7Sp335ECuc" 
               alt="Dona Bartô Logo" 
-              className="h-12 w-auto object-contain brightness-0"
+              className="h-14 w-auto object-contain brightness-0 transition-transform duration-500 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
           </div>
 
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-12">
             {['Início', 'Diferenciais', 'Sobre', 'Galeria', 'Depoimentos', 'Localização'].map((item) => (
               <button 
                 key={item} 
                 onClick={() => scrollTo(item.toLowerCase())}
-                className="text-xs font-bold uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity"
+                className="text-[10px] font-bold uppercase tracking-[0.25em] opacity-50 hover:opacity-100 hover:text-brand transition-all relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-px after:bg-brand after:transition-all hover:after:w-full"
               >
                 {item}
               </button>
@@ -108,7 +108,7 @@ export default function App() {
               href="https://wa.me/message/UVT4XL33UPG3J1" 
               target="_blank" 
               rel="noreferrer"
-              className="bg-brand px-8 py-3 rounded-none text-xs uppercase tracking-widest font-bold text-white hover:bg-brand/90 transition-colors pulse-brand"
+              className="bg-brand px-10 py-4 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold text-white hover:bg-brand/90 transition-all shadow-lg shadow-brand/10 pulse-brand"
             >
               Pedir Agora
             </a>
@@ -120,19 +120,19 @@ export default function App() {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 w-full bg-paper p-8 flex flex-col gap-6 border-b border-ink/10 animate-in fade-in slide-in-from-top-4">
+          <div className="md:hidden fixed inset-0 top-24 bg-paper/98 backdrop-blur-xl p-12 flex flex-col gap-8 animate-in fade-in slide-in-from-top-8">
             {['Início', 'Diferenciais', 'Sobre', 'Galeria', 'Depoimentos', 'Localização'].map((item) => (
               <button 
                 key={item} 
                 onClick={() => scrollTo(item.toLowerCase())}
-                className="text-xl font-display font-medium text-left"
+                className="text-4xl font-display font-medium text-left italic border-b border-ink/5 pb-4"
               >
                 {item}
               </button>
             ))}
             <a 
               href="https://wa.me/message/UVT4XL33UPG3J1" 
-              className="bg-brand w-full py-5 text-center font-bold text-white uppercase tracking-widest text-sm"
+              className="bg-brand w-full py-6 text-center font-bold text-white uppercase tracking-[0.3em] text-xs rounded-full mt-4"
             >
               Pedir Agora
             </a>
