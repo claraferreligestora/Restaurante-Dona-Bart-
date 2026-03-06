@@ -94,12 +94,12 @@ export default function App() {
             />
           </div>
 
-          <nav className="hidden md:flex items-center gap-12">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-10">
             {['Início', 'Diferenciais', 'Sobre', 'Galeria', 'Depoimentos', 'Localização'].map((item) => (
               <button 
                 key={item} 
                 onClick={() => scrollTo(item.toLowerCase())}
-                className="text-[10px] font-bold uppercase tracking-[0.25em] opacity-50 hover:opacity-100 hover:text-brand transition-all relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-px after:bg-brand after:transition-all hover:after:w-full"
+                className="text-[9px] lg:text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 hover:opacity-100 hover:text-brand transition-all relative whitespace-nowrap after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-px after:bg-brand after:transition-all hover:after:w-full"
               >
                 {item}
               </button>
@@ -108,7 +108,7 @@ export default function App() {
               href="https://wa.me/message/UVT4XL33UPG3J1" 
               target="_blank" 
               rel="noreferrer"
-              className="bg-brand px-10 py-4 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold text-white hover:bg-brand/90 transition-all shadow-lg shadow-brand/10 pulse-brand"
+              className="bg-brand px-6 lg:px-10 py-3 lg:py-4 rounded-full text-[9px] lg:text-[10px] uppercase tracking-[0.2em] font-bold text-white hover:bg-brand/90 transition-all shadow-lg shadow-brand/10 pulse-brand whitespace-nowrap"
             >
               Pedir Agora
             </a>
@@ -120,19 +120,19 @@ export default function App() {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-24 bg-paper/98 backdrop-blur-xl p-12 flex flex-col gap-8 animate-in fade-in slide-in-from-top-8">
+          <div className="md:hidden fixed inset-0 top-24 bg-paper/98 backdrop-blur-xl p-8 flex flex-col gap-6 animate-in fade-in slide-in-from-top-8 overflow-y-auto">
             {['Início', 'Diferenciais', 'Sobre', 'Galeria', 'Depoimentos', 'Localização'].map((item) => (
               <button 
                 key={item} 
                 onClick={() => scrollTo(item.toLowerCase())}
-                className="text-4xl font-display font-medium text-left italic border-b border-ink/5 pb-4"
+                className="text-3xl sm:text-4xl font-display font-medium text-left italic border-b border-ink/5 pb-4 break-words"
               >
                 {item}
               </button>
             ))}
             <a 
               href="https://wa.me/message/UVT4XL33UPG3J1" 
-              className="bg-brand w-full py-6 text-center font-bold text-white uppercase tracking-[0.3em] text-xs rounded-full mt-4"
+              className="bg-brand w-full py-5 text-center font-bold text-white uppercase tracking-[0.2em] text-xs rounded-full mt-4 shrink-0"
             >
               Pedir Agora
             </a>
