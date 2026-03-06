@@ -5,19 +5,20 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Playfair Display", serif;
   --font-script: "Pinyon Script", cursive;
-  --color-brand: #634832; /* Elegant Brown */
-  --color-brand-light: #A68B77;
-  --color-dark: #0A0A0A;
-  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-brand: #D4AF37; /* Metallic Gold */
+  --color-brand-light: #F5E6BE;
+  --color-paper: #0A0A0A; /* Deep Black */
+  --color-ink: #F5F5F5; /* Off-white */
+  --color-surface: #151515;
 }
 
 @layer base {
   body {
-    @apply bg-dark text-white font-sans antialiased;
+    @apply bg-paper text-ink font-sans antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-normal font-medium;
+    @apply font-display tracking-tight font-medium;
   }
 }
 
@@ -26,21 +27,18 @@
 }
 
 .glass {
-  backdrop-filter: blur(24px);
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  background-color: rgba(20, 20, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.bento-item {
-  @apply rounded-3xl p-8 transition-all duration-500;
-  backdrop-filter: blur(24px);
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.editorial-card {
+  @apply border border-white/5 p-8 transition-all duration-700 bg-surface rounded-3xl;
 }
 
-.bento-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.02);
+.editorial-card:hover {
+  @apply border-brand/40 shadow-2xl shadow-brand/10;
+  transform: translateY(-8px);
 }
 
 .pulse-brand {
@@ -49,13 +47,13 @@
 
 @keyframes pulse-brand {
   0% {
-    box-shadow: 0 0 0 0 rgba(166, 139, 119, 0.4);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(166, 139, 119, 0);
+    box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(166, 139, 119, 0);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
   }
 }
 
@@ -63,19 +61,28 @@
   display: flex;
   overflow: hidden;
   user-select: none;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .marquee-content {
   flex-shrink: 0;
   display: flex;
   justify-content: space-around;
-  gap: 2rem;
+  gap: 4rem;
   min-width: 100%;
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 @keyframes scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-100%); }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.line-divider {
+  @apply h-px w-full bg-ink/10 my-8;
 }
