@@ -5,10 +5,11 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Playfair Display", serif;
   --font-script: "Pinyon Script", cursive;
-  --color-brand: #634832;
-  --color-brand-light: #A68B77;
-  --color-paper: #FDFCFB;
-  --color-ink: #1A1A1A;
+  --color-brand: #D4AF37; /* Metallic Gold */
+  --color-brand-light: #F5E6BE;
+  --color-paper: #0A0A0A; /* Deep Black */
+  --color-ink: #F5F5F5; /* Off-white */
+  --color-surface: #151515;
 }
 
 @layer base {
@@ -26,18 +27,18 @@
 }
 
 .glass {
-  backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(20px);
+  background-color: rgba(20, 20, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .editorial-card {
-  @apply border border-ink/5 p-8 transition-all duration-500 bg-white;
+  @apply border border-white/5 p-8 transition-all duration-700 bg-surface rounded-3xl;
 }
 
 .editorial-card:hover {
-  @apply border-brand/20 shadow-xl shadow-brand/5;
-  transform: translateY(-4px);
+  @apply border-brand/40 shadow-2xl shadow-brand/10;
+  transform: translateY(-8px);
 }
 
 .pulse-brand {
@@ -46,13 +47,13 @@
 
 @keyframes pulse-brand {
   0% {
-    box-shadow: 0 0 0 0 rgba(99, 72, 50, 0.2);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(99, 72, 50, 0);
+    box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(99, 72, 50, 0);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
   }
 }
 

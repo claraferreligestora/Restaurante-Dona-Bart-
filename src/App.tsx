@@ -149,9 +149,9 @@ export default function App() {
               <span className="text-xs uppercase tracking-[0.3em] font-bold text-brand-light">Desde 2020</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-display leading-[0.85] mb-8">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display leading-[0.9] mb-8">
               Sabor <br />
-              <span className="italic font-script text-brand-light text-7xl md:text-9xl block mt-4">Artesanal</span>
+              <span className="italic font-script text-brand-light text-6xl md:text-8xl block mt-4">Artesanal</span>
             </h1>
             
             <p className="text-lg md:text-xl opacity-70 max-w-lg mb-12 leading-relaxed">
@@ -179,7 +179,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="hero-image relative h-[60vh] lg:h-[80vh]">
+          <div className="hero-image relative h-[50vh] lg:h-[70vh] xl:h-[80vh]">
             <div className="absolute inset-0 border border-ink/5 m-4 lg:m-8"></div>
             <img 
               src="https://lh3.googleusercontent.com/d/1Q5dHotxXYYa95g91_A3IoFtZ2SJLxCDh" 
@@ -217,12 +217,12 @@ export default function App() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 reveal">
           <div className="max-w-2xl">
             <span className="text-xs uppercase tracking-[0.3em] font-bold text-brand-light mb-4 block">Diferenciais</span>
-            <h2 className="text-5xl md:text-7xl font-display leading-tight">Por que escolher a <br /><span className="italic">Dona Bartô?</span></h2>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display leading-tight">Por que escolher a <br /><span className="italic">Dona Bartô?</span></h2>
           </div>
-          <p className="opacity-60 max-w-xs mt-8 md:mt-0">Elevamos o conceito de marmita com ingredientes frescos e processos artesanais.</p>
+          <p className="opacity-60 max-w-xs mt-8 md:mt-0 text-sm leading-relaxed">Elevamos o conceito de marmita com ingredientes frescos e processos artesanais que preservam o sabor caseiro.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink/5 border border-ink/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             { 
               icon: ChefHat, 
@@ -243,7 +243,7 @@ export default function App() {
               video: "https://drive.google.com/uc?export=download&id=1Pa4mL0nPcpFkaEc5VUqt6ytAmgB1rJ_S"
             }
           ].map((item, i) => (
-            <div key={i} className="editorial-card group relative overflow-hidden h-[450px] flex flex-col justify-end">
+            <div key={i} className="editorial-card group relative overflow-hidden h-[500px] flex flex-col justify-end rounded-2xl">
               <video 
                 className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-20 transition-opacity duration-700"
                 autoPlay muted loop playsInline
