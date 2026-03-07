@@ -86,12 +86,14 @@ export default function App() {
       <header className="fixed top-0 left-0 w-full z-50 glass border-b border-ink/5">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
           <div className="flex items-center cursor-pointer group" onClick={() => scrollTo('hero')}>
-            <img 
-              src="https://lh3.googleusercontent.com/d/15oBXw1JVm8hv2YBgQjTO3Y7Sp335ECuc" 
-              alt="Dona Bartô Logo" 
-              className="h-14 w-auto object-contain brightness-0 transition-transform duration-500 group-hover:scale-105"
-              referrerPolicy="no-referrer"
-            />
+            <div className="p-2 border border-brand/10 rounded-lg">
+              <img 
+                src="https://lh3.googleusercontent.com/d/15oBXw1JVm8hv2YBgQjTO3Y7Sp335ECuc" 
+                alt="Dona Bartô Logo" 
+                className="h-12 w-auto object-contain brightness-0 transition-transform duration-500 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+            </div>
           </div>
 
           <nav className="hidden md:flex items-center gap-6 lg:gap-10">
@@ -428,7 +430,7 @@ export default function App() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.3475841445!2d-46.6268846!3d-23.484004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce593444444445%3A0x4444444444444444!2sDona%20Bart%C3%B4!5e0!3m2!1spt-BR!2sbr!4v1709490000000!5m2!1spt-BR!2sbr" 
               width="100%" 
               height="100%" 
-              style={{ border: 0, filter: 'grayscale(1) contrast(1.1) brightness(0.95)' }} 
+              style={{ border: 0, filter: 'grayscale(0.5) contrast(1) brightness(1.05)' }} 
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
@@ -442,12 +444,16 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-20 mb-32">
             <div className="md:col-span-4">
-              <img 
-                src="https://lh3.googleusercontent.com/d/15oBXw1JVm8hv2YBgQjTO3Y7Sp335ECuc" 
-                alt="Dona Bartô" 
-                className="h-12 w-auto mb-10 brightness-0"
-                referrerPolicy="no-referrer"
-              />
+              <div className="flex items-center group cursor-pointer mb-10" onClick={() => scrollTo('início')}>
+                <div className="p-2 border border-brand/10 rounded-lg">
+                  <img 
+                    src="https://lh3.googleusercontent.com/d/15oBXw1JVm8hv2YBgQjTO3Y7Sp335ECuc" 
+                    alt="Dona Bartô" 
+                    className="h-10 w-auto object-contain brightness-0"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
               <p className="opacity-50 leading-relaxed mb-10">
                 Gastronomia caseira e marmitas congeladas de alta qualidade. 
                 Sabor, saúde e praticidade em cada prato.

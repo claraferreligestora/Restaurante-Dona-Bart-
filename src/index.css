@@ -6,10 +6,10 @@
   --font-display: "Playfair Display", serif;
   --font-script: "Pinyon Script", cursive;
   --color-brand: #D4AF37; /* Metallic Gold */
-  --color-brand-light: #F5E6BE;
-  --color-paper: #0A0A0A; /* Deep Black */
-  --color-ink: #F5F5F5; /* Off-white */
-  --color-surface: #151515;
+  --color-brand-light: #A68A2D; /* Darker Gold for visibility on light theme */
+  --color-paper: #F5F5F7; /* Gelo / Ice White */
+  --color-ink: #1A1A1A; /* Deep Gray/Black */
+  --color-surface: #FFFFFF;
 }
 
 @layer base {
@@ -28,12 +28,12 @@
 
 .glass {
   backdrop-filter: blur(20px);
-  background-color: rgba(20, 20, 20, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(245, 245, 247, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .editorial-card {
-  @apply border border-white/5 p-8 transition-all duration-700 bg-surface rounded-3xl;
+  @apply border border-black/5 p-8 transition-all duration-700 bg-white rounded-3xl;
 }
 
 .editorial-card:hover {
