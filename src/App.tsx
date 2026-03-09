@@ -85,12 +85,12 @@ export default function App() {
       {/* Header */}
       <header className="fixed top-0 left-0 w-full z-50 glass border-b border-ink/5">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-          <div className="flex items-center cursor-pointer group" onClick={() => scrollTo('hero')}>
+          <div className="flex items-center cursor-pointer group" onClick={() => scrollTo('início')}>
             <div className="p-2 border border-brand/10 rounded-lg">
               <img 
                 src="https://lh3.googleusercontent.com/d/15oBXw1JVm8hv2YBgQjTO3Y7Sp335ECuc" 
                 alt="Dona Bartô Logo" 
-                className="h-12 w-auto object-contain brightness-0 transition-transform duration-500 group-hover:scale-105"
+                className="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -153,7 +153,7 @@ export default function App() {
             
             <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display leading-[0.9] mb-8">
               Sabor <br />
-              <span className="italic font-script text-brand-light text-6xl md:text-8xl block mt-4">Artesanal</span>
+              <span className="italic font-script text-brand-light text-6xl md:text-8xl block mt-4">Caseiro</span>
             </h1>
             
             <p className="text-lg md:text-xl opacity-70 max-w-lg mb-12 leading-relaxed">
@@ -218,10 +218,10 @@ export default function App() {
       <section id="diferenciais" className="py-32 max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 reveal">
           <div className="max-w-2xl">
-            <span className="text-xs uppercase tracking-[0.3em] font-bold text-brand-light mb-4 block">Diferenciais</span>
+            <span className="text-xs uppercase tracking-[0.3em] font-bold text-brand-light mb-4 block">Nossos Diferenciais</span>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display leading-tight">Por que escolher a <br /><span className="italic">Dona Bartô?</span></h2>
           </div>
-          <p className="opacity-60 max-w-xs mt-8 md:mt-0 text-sm leading-relaxed">Elevamos o conceito de marmita com ingredientes frescos e processos artesanais que preservam o sabor caseiro.</p>
+          <p className="opacity-60 max-w-xs mt-8 md:mt-0 text-sm leading-relaxed">Elevamos o conceito de marmita com ingredientes frescos e processos caseiros que preservam o sabor de verdade.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -237,12 +237,6 @@ export default function App() {
               title: "Sempre Pronto", 
               desc: "Marmitas congeladas com tecnologia que preserva 100% dos nutrientes.",
               video: "https://drive.google.com/uc?export=download&id=1vCNuvmMjYcR3ym_5HLRsBhjJS604If3J"
-            },
-            { 
-              icon: Heart, 
-              title: "Feito com Amor", 
-              desc: "Cada marmita é montada individualmente, garantindo o padrão de qualidade.",
-              video: "https://drive.google.com/uc?export=download&id=1Pa4mL0nPcpFkaEc5VUqt6ytAmgB1rJ_S"
             }
           ].map((item, i) => (
             <div key={i} className="editorial-card group relative overflow-hidden h-[500px] flex flex-col justify-end rounded-2xl">
@@ -270,7 +264,7 @@ export default function App() {
             <h2 className="text-5xl md:text-7xl font-display leading-tight mb-10">Mais que um restaurante, <br /><span className="italic">uma missão.</span></h2>
             <p className="text-lg opacity-70 mb-10 leading-relaxed">
               Nascemos da vontade de levar comida de verdade para quem não tem tempo de cozinhar. 
-              Acreditamos que a alimentação é o combustível da alma, e por isso não abrimos mão de temperos naturais e zero conservantes.
+              Acreditamos que a alimentação é o combustível da alma, e por isso não abrimos mão de temperos naturais e sem conservantes.
             </p>
             
             <div className="space-y-8 mb-12">
@@ -298,12 +292,12 @@ export default function App() {
               <div className="absolute -inset-4 border border-ink/5"></div>
               <img 
                 src="https://lh3.googleusercontent.com/d/1KABGox_W8NjcpWXOLzHttTiWc5lGi5IU" 
-                alt="Cozinha Artesanal" 
+                alt="Cozinha Caseira" 
                 className="w-full aspect-[4/5] object-cover grayscale-[0.1]"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute top-12 -right-12 vertical-text text-[10px] uppercase tracking-[0.5em] font-bold opacity-20 hidden lg:block">
-                Dona Bartô • Gastronomia Artesanal
+                Dona Bartô • Gastronomia Caseira
               </div>
             </div>
           </div>
@@ -313,20 +307,18 @@ export default function App() {
       {/* Gallery - Editorial Grid */}
       <section id="galeria" className="py-32 max-w-7xl mx-auto px-6">
         <div className="text-center mb-24 reveal">
-          <span className="text-xs uppercase tracking-[0.3em] font-bold text-brand-light mb-4 block">Galeria</span>
+          <span className="text-xs uppercase tracking-[0.3em] font-bold text-brand-light mb-4 block">Nossa Galeria</span>
           <h2 className="text-5xl md:text-7xl font-display italic">Sabor em Movimento</h2>
         </div>
 
-        <div className="columns-1 md:columns-2 lg:columns-4 gap-6 space-y-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {[
             { id: '1MtmFSiw9eiqgVcPZoo4_Kgp8XOumlXcn', type: 'video' },
             { id: '1vCNuvmMjYcR3ym_5HLRsBhjJS604If3J', type: 'video' },
-            { id: '1Pa4mL0nPcpFkaEc5VUqt6ytAmgB1rJ_S', type: 'video' },
-            { id: '12_CKV0Hgs16uRy_g0-PJgJIdpZs6Zt0L', type: 'video' },
-            { id: '1Q5dHotxXYYa95g91_A3IoFtZ2SJLxCDh', type: 'image' },
-            { id: '1qVQEsdc6UQevIi6yaQOBXI0na9CAjutC', type: 'image' },
+            { id: '1hvRj55rchPtMse6Ll_OOLDYBZACfqXlC', type: 'image' },
             { id: '1KABGox_W8NjcpWXOLzHttTiWc5lGi5IU', type: 'image' },
-            { id: '1hvRj55rchPtMse6Ll_OOLDYBZACfqXlC', type: 'image' }
+            { id: '1qVQEsdc6UQevIi6yaQOBXI0na9CAjutC', type: 'image' },
+            { id: '1Q5dHotxXYYa95g91_A3IoFtZ2SJLxCDh', type: 'image' }
           ].map((item, index) => (
             <div key={item.id} className="reveal group relative overflow-hidden border border-ink/5 bg-white">
               {item.type === 'video' ? (
@@ -334,7 +326,7 @@ export default function App() {
                   className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
                   autoPlay muted loop playsInline
                 >
-                  <source src={`https://drive.google.com/uc?export=download&id=${item.id}`} type="video/mp4" />
+                  <source src={`https://drive.google.com/uc?id=${item.id}`} type="video/mp4" />
                 </video>
               ) : (
                 <img 
@@ -342,6 +334,7 @@ export default function App() {
                   alt="Dona Bartô" 
                   className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               )}
             </div>
@@ -372,7 +365,7 @@ export default function App() {
             {[
               { name: "Sueli Santos", comment: "Comida maravilhosa, tempero caseiro de verdade. As marmitas congeladas salvam minha semana!", role: "Google Review" },
               { name: "Marcos Oliveira", comment: "Excelente atendimento e a comida é divina. Recomendo muito o frango com quiabo.", role: "Google Review" },
-              { name: "Juliana Lima", comment: "Melhor custo benefício da região. Comida saudável, fresquinha e entrega super rápida.", role: "Google Review" }
+              { name: "Juliana Lima", comment: "Melhor custo-benefício da região. Comida saudável, fresquinha e entrega super rápida.", role: "Google Review" }
             ].map((t, i) => (
               <div key={i} className="reveal text-center">
                 <div className="flex justify-center gap-1 mb-8">
@@ -449,7 +442,7 @@ export default function App() {
                   <img 
                     src="https://lh3.googleusercontent.com/d/15oBXw1JVm8hv2YBgQjTO3Y7Sp335ECuc" 
                     alt="Dona Bartô" 
-                    className="h-10 w-auto object-contain brightness-0"
+                    className="h-10 w-auto object-contain"
                     referrerPolicy="no-referrer"
                   />
                 </div>
